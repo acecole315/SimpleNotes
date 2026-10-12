@@ -616,3 +616,241 @@ export default function HomeScreen() {
     </SafeAreaView>
   );
 }
+const styles = StyleSheet.create({
+  safeArea: {
+    flex: 1,
+  },
+
+  container: {
+    flex: 1,
+  },
+
+  header: {
+    paddingHorizontal: 20,
+    paddingTop: 20,
+    paddingBottom: 12,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
+
+  headerTextContainer: {
+    flex: 1,
+  },
+
+  headerTitle: {
+    fontSize: 28,
+    fontWeight: "700",
+  },
+
+  headerSubtitle: {
+    fontSize: 14,
+    marginTop: 4,
+  },
+
+
+  themeButton: {
+    width: 44,
+    height: 44,
+    borderRadius: 22,
+    borderWidth: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    marginLeft: 10,
+  },
+
+  themeIcon: {
+    fontSize: 20,
+  },
+
+  searchInput: {
+    height: 48,
+    marginHorizontal: 20,
+    marginTop: 8,
+    paddingHorizontal: 16,
+    borderRadius: 14,
+    borderWidth: 1,
+    fontSize: 15,
+  },
+
+
+  countContainer: {
+    paddingHorizontal: 20,
+    paddingTop: 14,
+    paddingBottom: 8,
+  },
+
+  countText: {
+    fontSize: 13,
+    fontWeight: "600",
+  },
+
+
+  list: {
+    paddingHorizontal: 20,
+    paddingBottom: 110,
+  },
+
+  noteCard: {
+    flexDirection: "row",
+    alignItems: "center",
+    padding: 16,
+    borderRadius: 16,
+    marginBottom: 12,
+    borderWidth: 1,
+  },
+
+  noteMain: {
+    flex: 1,
+    marginRight: 10,
+  },
+
+  noteTitle: {
+    fontSize: 17,
+    fontWeight: "600",
+    marginBottom: 6,
+  },
+
+  noteContent: {
+    fontSize: 14,
+    lineHeight: 20,
+    marginBottom: 8,
+  },
+
+  noteDate: {
+    fontSize: 11,
+  },
+
+  arrow: {
+    fontSize: 28,
+    fontWeight: "300",
+  },
+
+  emptyContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    paddingHorizontal: 35,
+  },
+
+  emptyIcon: {
+    width: 60,
+    height: 60,
+    borderRadius: 30,
+    justifyContent: "center",
+    alignItems: "center",
+    marginBottom: 15,
+  },
+
+  emptyIconText: {
+    fontSize: 30,
+    fontWeight: "400",
+  },
+
+  emptyTitle: {
+    fontSize: 22,
+    fontWeight: "700",
+    marginBottom: 8,
+  },
+
+  emptyText: {
+    fontSize: 14,
+    textAlign: "center",
+    lineHeight: 21,
+  },
+
+  addButton: {
+    position: "absolute",
+    right: 24,
+    bottom: 28,
+    width: 60,
+    height: 60,
+    borderRadius: 30,
+    justifyContent: "center",
+    alignItems: "center",
+    elevation: 6,
+  },
+
+  addButtonText: {
+    fontSize: 32,
+    lineHeight: 36,
+    fontWeight: "400",
+  },
+
+  modalBackground: {
+    flex: 1,
+    justifyContent: "flex-end",
+    backgroundColor:
+      "rgba(0, 0, 0, 0.35)",
+  },
+
+  modalContainer: {
+    paddingHorizontal: 20,
+    paddingTop: 22,
+    paddingBottom: 30,
+    borderTopLeftRadius: 24,
+    borderTopRightRadius: 24,
+  },
+
+  modalTitle: {
+    fontSize: 24,
+    fontWeight: "700",
+    marginBottom: 20,
+  },
+
+  inputLabel: {
+    fontSize: 13,
+    fontWeight: "600",
+    marginBottom: 7,
+  },
+
+  titleInput: {
+    height: 48,
+    borderWidth: 1,
+    borderRadius: 12,
+    paddingHorizontal: 13,
+    fontSize: 16,
+    marginBottom: 16,
+  },
+
+  contentInput: {
+    height: 160,
+    borderWidth: 1,
+    borderRadius: 12,
+    padding: 13,
+    fontSize: 15,
+    marginBottom: 20,
+  },
+
+  modalButtons: {
+    flexDirection: "row",
+  },
+
+  cancelButton: {
+    flex: 1,
+    height: 48,
+    borderRadius: 12,
+    justifyContent: "center",
+    alignItems: "center",
+    marginRight: 6,
+  },
+
+  cancelButtonText: {
+    fontSize: 15,
+    fontWeight: "600",
+  },
+
+  saveButton: {
+    flex: 1,
+    height: 48,
+    borderRadius: 12,
+    justifyContent: "center",
+    alignItems: "center",
+    marginLeft: 6,
+  },
+
+  saveButtonText: {
+    fontSize: 15,
+    fontWeight: "600",
+  },
+});
