@@ -585,30 +585,18 @@ export default function NotesScreen() {
                   </Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity
-                  style={[
-                    styles.deleteButton,
-                    {
-                      backgroundColor:
-                        colors.button,
-                    },
-                  ]}
-                  activeOpacity={0.7}
-                  onPress={deleteNote}
-                >
-                  <Text
-                    style={[
-                      styles.deleteText,
-                      {
-                        color:
-                          colors.buttonText,
-                      },
-                    ]}
-                  >
-                    Delete
-                  </Text>
-                </TouchableOpacity>
-
+<TouchableOpacity
+  style={[
+    styles.deleteButton,
+    { backgroundColor: "#DC2626" },
+  ]}
+  activeOpacity={0.7}
+  onPress={deleteNote}
+>
+  <Text style={styles.deleteText}>
+    Delete
+  </Text>
+</TouchableOpacity>
               </View>
             </>
           )}
