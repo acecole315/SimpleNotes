@@ -159,61 +159,31 @@ export default function NotesScreen() {
     }
   };
 
-  const deleteNote = () => {
-    if (!note) {
-      return;
-    }
+const deleteNote = async () => {
+  if (!note) return;
 
-    Alert.alert(
-      "Delete Note",
-      `Are you sure you want to delete "${note.title}"?`,
-      [
-        {
-          text: "Cancel",
-          style: "cancel",
-        },
-        {
-          text: "Delete",
-          style: "destructive",
+  try {
+    const savedNotes =
+      await AsyncStorage.getItem(STORAGE_KEY);
 
-          onPress: async () => {
-            try {
-              const savedNotes =
-                await AsyncStorage.getItem(
-                  STORAGE_KEY
-                );
+    const notes: Note[] = savedNotes
+      ? JSON.parse(savedNotes)
+      : [];
 
-              if (!savedNotes) {
-                return;
-              }
-
-              const notes: Note[] =
-                JSON.parse(savedNotes);
-
-              const updatedNotes =
-                notes.filter(
-                  (item) =>
-                    item.id !== note.id
-                );
-
-              await AsyncStorage.setItem(
-                STORAGE_KEY,
-                JSON.stringify(updatedNotes)
-              );
-
-              router.back();
-            } catch (error) {
-              console.log(
-                "Failed to delete note:",
-                error
-              );
-            }
-          },
-        },
-      ]
+    const updatedNotes = notes.filter(
+      (item) => item.id !== note.id
     );
-  };
 
+    await AsyncStorage.setItem(
+      STORAGE_KEY,
+      JSON.stringify(updatedNotes)
+    );
+
+    router.back();
+  } catch (error) {
+    console.log("Failed to delete note:", error);
+  }
+};
   if (!note) {
     return (
       <SafeAreaView
